@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+
+    <meta charset="UTF-8">
+
+    <title>Transavia Story Site</title>
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <img src="styles/images/transavia%20logo%202.png" alt="Transavia logo">
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="mijnverhalen.html">Mijn Verhalen</a></li>
+
+                    <li><a href="login.html">Log In</a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+    </header>
+
+    <h1>Transavia Storytime - Top 5</h1>
+
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <div class="numbertext">#1 - iPhone</div>
+            <img src="styles/images/iphone.jpg" style="width:100%" alt="iphone">
+            <div class="lowerbalk">Save Download</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">#2 - Liefde</div>
+            <img src="styles/images/liefde.jpg" style="width:100%" alt="liefde">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">Presentator die...</div>
+            <img src="styles/images/presentator.jpg" style="width:100%" alt="presentator">
+        </div>
+
+
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+
+    <main>
+        <div class="verhalenoverzicht">
+
+            <section class="heading2">
+                <h2>Kies een verhaal</h2>
+
+                <input type="text" placeholder="Zoek een verhaal...">
+
+                <!-- Rounded switch -->
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+
+            </section>
+
+            <section>
+                <a class="minuten" href="minuten.html">± 5 minuten</a>
+                <a class="minuten" href="minuten.html">± 10 minuten</a>
+                <a class="minuten" href="minuten.html">± 15 minuten</a>
+            </section>
+
+            <div class="verhalen">
+                <article>
+                    <a href="Verliefd.html">
+                        <h3>Verliefd</h3>
+                    </a>
+                </article>
+            </div>
+
+
+            <!--
+
+        <section>
+            <h2>Zoek</h2>
+            <input type="text" name="search" placeholder="Zoek een verhaal...">
+            <button>Zoek</button>
+        </section>
+
+
+        <section>
+            <h2>Lees verder</h2>
+            <a href="verhaal34.html">Verhaal 34 - iPhone<input type=submit value="Verder Lezen"></a>
+        </section>
+
+        <section>
+            <h2>Nu populair</h2>
+            <article>
+                <h3><a href="verhaal10.html">Verhaal 10 - Verliefd</a></h3>
+                <p>Licht van mijn leven. Ik stapte vandaag bus 21 uit. Het was op het midden van de dag. En wat een heerlijke dag! Het was twaalf uur, onze fantastische zoon sliep net. De miezelregen aaide de haartjes op mijn hand en ik dacht aan jou. De mensen dansten en huppelden van en naar het station, en ik dacht aan jou.</p>
+            </article>
+
+            <article>
+                <h3><a href="verhaal85.html">Verhaal 85 - Presentator die ...’</a></h3>
+                <p>Yo kids! Vet cool dat je weer kijkt! Hoor mijn verhaal: Ik stapte laatst de bus uit op het stadionplein. Je weet togh?! Ik duwde mijn zoon die in zijn superlauwe, gifgroene kinderwagen lag te ronken. Het was druk op het plein, maar de mensen waren me toch een partijtje chaggie! Niet normaal meer. Ze keken allemaal naar beneden terwijl de miezerregen en de wind hun ding deden. Lekker? Not!</p>
+            </article>
+
+            <article>
+                <h3><a href="verhaal34.html">Verhaal 34 - iPhone</a></h3>
+                <p>Om een uur of 12 stapte ik op CS bus 21 uitomdat ik naar de Ipenbare Bibliotheek op weg was, waar ik Stijloefeningen van Q-No wilde lenen. Was ik al een tijdje naar op zoek. Kutweer’ dat het was. En een chaos, bouwputten e.d. Afijn, voordat ik de bieb in wilde gaan werd ik aangehouden ddor een vrouw. Ze sprak Engels met een Frans accent en vroeg of dit het postkantoor was. Het postkantoor zat daar al jaren niet meer. Dus dat zei ik.</p>
+            </article>
+
+        </section>
+
+        <section>
+            <h2>99 verhalen</h2>
+            <button>Filters</button>
+            <button>Sorteer op...</button>
+
+
+            <a href="verhaal10.html">Verhaal 10 - Verliefd</a>
+            <a href="verhaal85.html">Verhaal 85 - Presentator die ...’</a>
+            <a href="verhaal34.html">Verhaal 34 - iPhone</a>
+
+        </section>
+-->
+        </div>
+    </main>
+</body>
+
+</html>

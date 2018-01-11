@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Nexa_Free_Light';
+    src: url('Nexa_Free_Light-webfont.woff2') format('woff2'), url('Nexa_Free_Light-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'nexa_bold';
+    src: url('nexa_bold-webfont.woff') format('woff'), url('nexa_bold-webfont.woff2') format('woff2');
+}
+
+body {
+    background: #ffffff;
+}
